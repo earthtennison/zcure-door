@@ -2,7 +2,7 @@ resources:
 https://github.com/rcmalli/keras-vggface
 
 blogpost:
-https://www.dlology.com/blog/live-face-identification-with-pre-trained-vggface2-mode
+https://www.dlology.com/blog/live-face-identification-with-pre-trained-vggface2-model
 
 Official tensorflow installation:
 https://forums.developer.nvidia.com/t/official-tensorflow-for-jetson-nano/71770
