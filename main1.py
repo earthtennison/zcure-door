@@ -17,7 +17,11 @@ device = tf.config.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(device[0], True)
 tf.config.experimental.set_virtual_device_configuration(device[0], [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=1024)])
 faceCascade = cv2.CascadeClassifier('Cascades/haarcascade_frontalface_default.xml')
+
+
 vgg_features = VGGFace(model="resnet50", include_top=False, input_shape=(224, 224, 3), pooling='avg')
+
+
 def detect_face(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = faceCascade.detectMultiScale(
@@ -42,6 +46,7 @@ def preprocess_video(img):
     face = cv2.resize(face,(224,224))
     face = np.array((face,))
     return face, (x, y, w, h)
+    
 def preprocess(img_path, is_cropped = False):
     
     img = cv2.imread(img_path)
@@ -61,7 +66,9 @@ for img_name in img_list:
     img_path = os.path.join("sample_image",img_name)
     img = preprocess(img_path)
     #extract feature
+
     feature = vgg_features.predict(img)
+    
     #person name
     person_name = img_name.split("_")[0]
     print("Registered: "+person_name)
