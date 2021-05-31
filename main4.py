@@ -46,34 +46,7 @@ def preprocess_video(img):
     face = cv2.resize(face,(224,224))
     face = np.array((face,))
     return face, (x, y, w, h)
-    
-def preprocess(img_path, is_cropped = False):
-    
-    img = cv2.imread(img_path)
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    if not is_cropped:
-        face ,_ = detect_face(img)
-    else:
-        face = img
-    face = cv2.resize(face,(224,224))
-    face=np.array((face,))
-    return face
 
-#Registered person
-# img_list = [f for f in os.listdir("sample_image") if "regis" in f]
-# regis_data = {}
-# for img_name in img_list:
-#     img_path = os.path.join("sample_image",img_name)
-#     img = preprocess(img_path)
-#     #extract feature
-
-#     feature = vgg_features.predict(img)
-    
-#     #person name
-#     person_name = img_name.split("_")[0]
-#     print("Registered: "+person_name)
-#     regis_data[person_name] = feature
-# regis_person = sorted(list(regis_data.keys()))
 extracted_feat = []
 feat_list = [f for f in os.listdir("registered_feature")]
 feat_list = sorted(feat_list)
@@ -86,11 +59,6 @@ for feature in feat_list:
 #Servo
 i2c_bus0 = (busio.I2C(board.SCL_1,board.SDA_1))
 kit = ServoKit(channels=16,i2c=i2c_bus0)
-
-
-
-
-
 
 cap = cv2.VideoCapture(0)
 _,frame = cap.read()
@@ -113,7 +81,7 @@ while True:
         else:
             cv2.rectangle(frame, (x,y), (x+w,y+h), (0,255,0), 2)
             feature_infer = vgg_features.predict(img_infer)
-            #extracted_feat = np.asarray(extracted_feat)
+            extracted_feat = np.asarray(extracted_feat)
             distances = [np.linalg.norm(f) for f in extracted_feat-feature_infer]
             #print(distances)
             if(np.min(distances)>thresh):

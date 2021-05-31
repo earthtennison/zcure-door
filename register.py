@@ -92,10 +92,6 @@ for img_name in img_list:
     extracted_feat.append(feature)
 
 extracted_feat = np.asarray(extracted_feat)
-# print(extracted_feat.shape)
-# print('----------------')
-# print(extracted_feat)
-# print('----------------')
 mean_feature = np.mean(extracted_feat.reshape(5,2048), axis=0)
 print(mean_feature)
 with open (feature_path+"/"+name+"_feature.pkl", 'wb') as f:
