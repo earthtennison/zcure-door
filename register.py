@@ -78,7 +78,7 @@ cv2.destroyAllWindows()
 vgg_features = VGGFace(model="resnet50", include_top=False, input_shape=(224, 224, 3), pooling='avg')
 
 img_list = [m for m in os.listdir(f"registered_img/{name}")]
-feature_path = f'registered_feature'
+feature_path = "registered_feature"
 if not os.path.exists(feature_path):
     os.makedirs(feature_path)
 

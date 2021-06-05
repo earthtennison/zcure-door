@@ -1,2 +1,5 @@
 model/*
 __pycache__/
+registered_feature/*
+sample_image/*
+registered_img/*
