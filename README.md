@@ -1,34 +1,14 @@
-See my Youtube Video (here)[https://www.youtube.com/watch?v=6P8Yet2vkyQ&t=255s]
+![thumbnail](https://github.com/earthtennison/zcure-door/blob/main/thumbnail.jpg)
+watch my Youtube video [here](https://www.youtube.com/watch?v=6P8Yet2vkyQ&t=255s)
 
-resources:
-https://github.com/rcmalli/keras-vggface
+Resources:
+[keras-vggface GitHub](https://github.com/rcmalli/keras-vggface)
+[keras-vggface usage example](https://www.dlology.com/blog/live-face-identification-with-pre-trained-vggface2-model)
+[Official Tensorflow installation in Jetson Nano](https://forums.developer.nvidia.com/t/official-tensorflow-for-jetson-nano/71770)
 
-blogpost:
-https://www.dlology.com/blog/live-face-identification-with-pre-trained-vggface2-model
+Alternatives for face detection:
+[MTCNN and dlib cannot surpass real-time fps (>20fps)](https://www.kaggle.com/timesler/comparison-of-face-detection-packages)
+[Comparison](https://learnopencv.com/face-detection-opencv-dlib-and-deep-learning-c-python/) > OpenCV haar, OpenCv dnn, dlib HOG, dlib MMOD* enable GPU
+[Comparison](https://github.com/nodefluxio/face-detector-benchmark/blob/master/benchmark-result.txt) > OpenCV haar, dlib HOG, dlib CNN, MTCNN, Mobilenet SSD
+[dlib HOG example usage](https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78)
 
-Official tensorflow installation:
-https://forums.developer.nvidia.com/t/official-tensorflow-for-jetson-nano/71770
-
-alternatives for face detection:
-
-comparison
-MTCNN and dlib cannot surpass real-time fps (>20fps)
-https://www.kaggle.com/timesler/comparison-of-face-detection-packages
-
-comparison
-opencv haar
-opencv dnn
-dlib HOG
-dlib MMOD* enable GPU
-https://learnopencv.com/face-detection-opencv-dlib-and-deep-learning-c-python/
-
-camparison
-opencv_haar
-dlib_hog
-dlib_cnn
-mtcnn
-mobilenet_ssd
-https://github.com/nodefluxio/face-detector-benchmark/blob/master/benchmark-result.txt
-
-face_recognition library with dlib HOG as detector
-https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78
