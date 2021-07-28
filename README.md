@@ -1,6 +1,6 @@
 ![thumbnail](https://github.com/earthtennison/zcure-door/blob/main/thumbnail.jpg)
 
-watch my Youtube video [here](https://www.youtube.com/watch?v=6P8Yet2vkyQ&t=255s)
+watch my Youtube video [here](https://www.youtube.com/watch?v=6P8Yet2vkyQ&t)
 
 Resources:\
 [keras-vggface GitHub](https://github.com/rcmalli/keras-vggface)\
