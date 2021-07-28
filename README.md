@@ -1,3 +1,5 @@
+See my Youtube Video (here)[https://www.youtube.com/watch?v=6P8Yet2vkyQ&t=255s]
+
 resources:
 https://github.com/rcmalli/keras-vggface
 
